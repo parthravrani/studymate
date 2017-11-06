@@ -1,1 +1,1 @@
-# studymate.github.io
+# studymate
