@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class Syllabus extends AppCompatActivity {
     private Spinner spinner,course;
@@ -1503,6 +1502,7 @@ public class Syllabus extends AppCompatActivity {
                     });
                 }
                 else if (course.getSelectedItem().toString().equals("Electrical")){
+                    final String e_pdf = "https://parthravrani.github.io/studymate/syllabus/electrical/";
                     spinner.setAdapter(adapterElect);
                     adapterElect.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1511,21 +1511,378 @@ public class Syllabus extends AppCompatActivity {
                             switch (i) {
                                 case 0:
                                     listView.setAdapter(listViewAdapterElect);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bm = e_pdf + "sem1/3300001%20Basic%20Mathematics.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bm);
+                                                    intent.putExtra("sub_names", "Basic Mathematics");
+                                                    intent.putExtra("sub_codes", "3300001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_eng = e_pdf + "sem1/3300002%20English.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eng);
+                                                    intent.putExtra("sub_names", "English");
+                                                    intent.putExtra("sub_codes", "3300002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_echm = e_pdf + "sem1/3300003%20Environment%20Conservation%20and%20Hazard%20Management%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_echm);
+                                                    intent.putExtra("sub_names", "Environment Conservation and Hazard Management");
+                                                    intent.putExtra("sub_codes", "3300003");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_ecg = e_pdf + "sem1/3300006%20Engineering%20Chemistry%20Group-2.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ecg);
+                                                    intent.putExtra("sub_names", "Engineering Chemistry Group-2");
+                                                    intent.putExtra("sub_codes", "3300006");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_bcit = e_pdf + "sem1/3300013%20Basic%20of%20Computer%20&%20information%20Technology%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bcit);
+                                                    intent.putExtra("sub_names", "Basic of Computer & Information Technology");
+                                                    intent.putExtra("sub_codes", "3300013");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_fme = e_pdf + "sem1/3300015%20Fundamental%20of%20Mechanical%20Engineering.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_fme);
+                                                    intent.putExtra("sub_names", "Fundamental of Mechanical Engineering");
+                                                    intent.putExtra("sub_codes", "3300015");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 1:
                                     listView.setAdapter(listViewAdapterElect2);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bpg = e_pdf + "sem2/3300005%20Basic%20Physics%20Group-2.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bpg);
+                                                    intent.putExtra("sub_names", "Basic Physics Group-2");
+                                                    intent.putExtra("sub_codes", "3300005");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_bed = e_pdf + "sem2/3300007%20Basic%20Engineering%20Drawing.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bed);
+                                                    intent.putExtra("sub_names", "Basic Engineering Drawing");
+                                                    intent.putExtra("sub_codes", "3300007");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_am1 = e_pdf + "sem2/3320002%20Advance%20Mathematics%20Group-1.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_am1);
+                                                    intent.putExtra("sub_names", "Advance Mathematics Group-1");
+                                                    intent.putExtra("sub_codes", "3320002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_bce = e_pdf + "sem2/3320004%20Basics%20Of%20Civil%20Engineering.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bce);
+                                                    intent.putExtra("sub_names", "Basics of Civil  Engineering");
+                                                    intent.putExtra("sub_codes", "3320004");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_eewp = e_pdf + "sem2/3320902%20Electrical%20Engineering%20Workshop%20Practise.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eewp);
+                                                    intent.putExtra("sub_names", "Electrical Engineering Workshop Practise");
+                                                    intent.putExtra("sub_codes", "3320902");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_dcs = e_pdf + "sem2/3320903%20DC%20Circuits.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dcs);
+                                                    intent.putExtra("sub_names", "DC Circuits");
+                                                    intent.putExtra("sub_codes", "3320903");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 2:
                                     listView.setAdapter(listViewAdapterElect3);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_acs = e_pdf + "sem3/3330901%20AC%20Circuits.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_acs);
+                                                    intent.putExtra("sub_names", "AC Circuits");
+                                                    intent.putExtra("sub_codes", "3330901");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_dmt = e_pdf + "sem3/3330902%20DC%20Machines%20and%20Transformers.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dmt);
+                                                    intent.putExtra("sub_names", "DC Machines and Transformers");
+                                                    intent.putExtra("sub_codes", "3330902");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_ei = e_pdf + "sem3/3330903%20Electrical%20Instrumentation.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ei);
+                                                    intent.putExtra("sub_names", "Electrical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3330903");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_epg = e_pdf + "sem3/3330904%20Electric%20Power%20Generation.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_epg);
+                                                    intent.putExtra("sub_names", "Electric Power Generation");
+                                                    intent.putExtra("sub_codes", "3330904");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_ecc = e_pdf + "sem3/3330905%20Electronic%20Components%20And%20Circuits.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ecc);
+                                                    intent.putExtra("sub_names", "Electronic Components And Circuits");
+                                                    intent.putExtra("sub_codes", "3330905");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 3:
                                     listView.setAdapter(listViewAdapterElect4);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_pptrm = e_pdf + "sem4/3340901%20POLY%20PHASE%20TRANSFORMERS%20AND%20ROTATING%20AC%20MACHINES.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pptrm);
+                                                    intent.putExtra("sub_names", "Poly Phase Transformers and Rotating AC Machines");
+                                                    intent.putExtra("sub_codes", "3340901");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_tde = e_pdf + "sem4/3340902%20%20TRANSMISSION%20AND%20DISTRIBUTION%20OF%20ELECTRICAL%20POWER.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_tde);
+                                                    intent.putExtra("sub_names", "Tranmission and Distribution of Electrical Power");
+                                                    intent.putExtra("sub_codes", "3340902");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_uee = e_pdf + "sem4/3340903%20UTILIZATION%20OF%20ELECTRICAL%20ENERGY.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_uee);
+                                                    intent.putExtra("sub_names", "Utilization of Electrical Enenrgy");
+                                                    intent.putExtra("sub_codes", "3340903");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_dedi = e_pdf + "sem4/3340904%20DIGITAL%20ELECTRONICS%20AND%20DIGITAL%20INSTRUMENTS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dedi);
+                                                    intent.putExtra("sub_names", "Digital Electronics and Digital Instruments");
+                                                    intent.putExtra("sub_codes", "3340904");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_caeds = e_pdf + "sem4/3340905%20COMPUTER%20AIDED%20ELECTRICAL%20DRAWING%20AND%20SIMULATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_caeds);
+                                                    intent.putExtra("sub_names", "Computer Aided Electrical Drawing and Simulation");
+                                                    intent.putExtra("sub_codes", "3340905");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 4:
                                     listView.setAdapter(listViewAdapterElect5);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_wecc = e_pdf + "sem5/3350901%20WIRING%20ESTIMATING%20COSTING%20AND%20CONTRACTING.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_wecc);
+                                                    intent.putExtra("sub_names", "Wiring Estimating Costing And Contracting");
+                                                    intent.putExtra("sub_codes", "3350901");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_eca = e_pdf + "sem5/3350902%20ENERGY%20CONSERVATION%20&%20AUDIT.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eca);
+                                                    intent.putExtra("sub_names", "Energy Conservation And Audit");
+                                                    intent.putExtra("sub_codes", "3350902");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_pe = e_pdf + "sem5/3350903%20POWER%20ELECTRONICS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pe);
+                                                    intent.putExtra("sub_names", "Power Electronics");
+                                                    intent.putExtra("sub_codes", "3350903");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_mca = e_pdf + "sem5/3350904%20MICROPROCESSOR%20AND%20CONTROLLER%20APPLICATIONS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mca);
+                                                    intent.putExtra("sub_names", "Microprocessor and Controller Applications");
+                                                    intent.putExtra("sub_codes", "3350904");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_wse = e_pdf + "sem5/3350905%20WIND%20AND%20SOLAR%20ENERGY%20SYSTEMS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_wse);
+                                                    intent.putExtra("sub_names", "Wind And Solar Energy Systems");
+                                                    intent.putExtra("sub_codes", "3350905");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_sem = e_pdf + "sem5/3350906%20SPECIAL%20ELECTRICAL%20MACHINES.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_sem);
+                                                    intent.putExtra("sub_names", "Special Electrical Machines");
+                                                    intent.putExtra("sub_codes", "3350906");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 6:
+                                                    String pdf_etc = e_pdf + "sem5/3350907%20ELECTRIC%20TRACTION%20AND%20CONTROL.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_etc);
+                                                    intent.putExtra("sub_names", "Electric Traction and Control");
+                                                    intent.putExtra("sub_codes", "3350907");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 5:
                                     listView.setAdapter(listViewAdapterElect6);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_psoc = e_pdf + "sem6/3360903%20POWER%20SYSTEM%20OPERATION%20AND%20CONTROL.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_psoc);
+                                                    intent.putExtra("sub_names", "Power System Operation and Control");
+                                                    intent.putExtra("sub_codes", "3360903");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_sepq = e_pdf + "sem6/3360904%20SUBSTATION%20ENGINEERING%20AND%20POWER%20QUALITY.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_sepq);
+                                                    intent.putExtra("sub_names", "Substraction Engineering and Power Quality");
+                                                    intent.putExtra("sub_codes", "3360904");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_dpem = e_pdf + "sem6/3360905%20%20DESIGN%20PARAMETERS%20OF%20ELECTRICAL%20EQUIPEMENT%20AND%20MACHINES.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dpem);
+                                                    intent.putExtra("sub_names", "Design Parameters of Electrical Equipement and Machines");
+                                                    intent.putExtra("sub_codes", "3360905");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_ed = e_pdf + "sem6/3360906%20%20ELECTRICAL%20DRIVES.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ed);
+                                                    intent.putExtra("sub_names", "Electrical Drives");
+                                                    intent.putExtra("sub_codes", "3360906");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_mtb = e_pdf + "sem6/3360907%20MAINTENANCE%20OF%20TRANSFORMER%20AND%20CIRCUIT%20BREAKER.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mtb);
+                                                    intent.putExtra("sub_names", "Maintenance of Transformer and Circuit Breaker");
+                                                    intent.putExtra("sub_codes", "3360907");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_ebc = e_pdf + "sem6/3360908%20ELECTRIFICATION%20OF%20BUILDING%20COMPLEXES.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ebc);
+                                                    intent.putExtra("sub_names", "Electrification of Building Complexes");
+                                                    intent.putExtra("sub_codes", "3360908");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                             }
                         }
@@ -1537,6 +1894,7 @@ public class Syllabus extends AppCompatActivity {
                     });
                 }
                 else if (course.getSelectedItem().toString().equals("Bio - Medical")){
+                    final String bio_pdf = "https://parthravrani.github.io/studymate/syllabus/bio-medical/";
                     spinner.setAdapter(adapterBIO);
                     adapterBIO.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1545,21 +1903,369 @@ public class Syllabus extends AppCompatActivity {
                             switch (i) {
                                 case 0:
                                     listView.setAdapter(listViewAdapterBIO);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bm = bio_pdf + "sem1/3300001%20Basic%20Mathematics.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bm);
+                                                    intent.putExtra("sub_names", "Basic Mathematics");
+                                                    intent.putExtra("sub_codes", "3300001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_eng = bio_pdf + "sem1/3300002%20English.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eng);
+                                                    intent.putExtra("sub_names", "English");
+                                                    intent.putExtra("sub_codes", "3300002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_echm = bio_pdf + "sem1/3300003%20Environment%20Conservation%20and%20Hazard%20Management%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_echm);
+                                                    intent.putExtra("sub_names", "Environment Conservation and Hazard Management");
+                                                    intent.putExtra("sub_codes", "3300003");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_ec = bio_pdf + "sem1/3300006%20Engineering%20Chemistry%20Group-2.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ec);
+                                                    intent.putExtra("sub_names", "Engineering Chemistry Group-2");
+                                                    intent.putExtra("sub_codes", "3300006");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_bcit = bio_pdf + "sem1/3300013%20Basic%20of%20Computer%20And%20information%20Technology%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bcit);
+                                                    intent.putExtra("sub_names", "Basic of Computer and Information Technology");
+                                                    intent.putExtra("sub_codes", "3300013");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_ecp = bio_pdf + "sem1/3311101%20Electronic%20Components%20&%20Practice.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ecp);
+                                                    intent.putExtra("sub_names", "Electronic Components & Practice");
+                                                    intent.putExtra("sub_codes", "3311101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 1:
                                     listView.setAdapter(listViewAdapterBIO2);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_cpd = bio_pdf + "sem2/1190001%20CPD.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_cpd);
+                                                    intent.putExtra("sub_names", "CPD");
+                                                    intent.putExtra("sub_codes", "1190001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_bp = bio_pdf + "sem2/3300005%20Basic%20Physics.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bp);
+                                                    intent.putExtra("sub_names", "Basic Physics");
+                                                    intent.putExtra("sub_codes", "3300005");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_fde = bio_pdf + "sem2/3310702%20Fundamentals%20of%20Digital%20Electronics.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_fde);
+                                                    intent.putExtra("sub_names", "Fundamentals of Digital Electronics");
+                                                    intent.putExtra("sub_codes", "3310702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_am = bio_pdf + "sem2/3320002%20Advance%20Mathemetics%20Group-1.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_am);
+                                                    intent.putExtra("sub_names", "Advance Mathematics Group-1");
+                                                    intent.putExtra("sub_codes", "3320002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_ha = bio_pdf + "sem2/3320301%20Human%20Anatomy.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ha);
+                                                    intent.putExtra("sub_names", "Human Anatomy");
+                                                    intent.putExtra("sub_codes", "3320301");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_hp = bio_pdf + "sem2/3320302%20Human%20Physiology.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_hp);
+                                                    intent.putExtra("sub_names", "Human Physiology");
+                                                    intent.putExtra("sub_codes", "3320302");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 2:
                                     listView.setAdapter(listViewAdapterBIO3);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_hrm = bio_pdf + "sem3/3330001%20Human%20Resource%20Management.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_hrm);
+                                                    intent.putExtra("sub_names", "Human Resource Management");
+                                                    intent.putExtra("sub_codes", "3330001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_be = bio_pdf + "sem3/3330301%20Basic%20Electronics.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_be);
+                                                    intent.putExtra("sub_names", "Basic Electronics");
+                                                    intent.putExtra("sub_codes", "3330301");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_dcn = bio_pdf + "sem3/3330302%20Data%20Communications%20And%20Networking.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dcn);
+                                                    intent.putExtra("sub_names", "Data Communication and Networking");
+                                                    intent.putExtra("sub_codes", "3330302");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_me = bio_pdf + "sem3/3330303%20Medical%20Electronics.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_me);
+                                                    intent.putExtra("sub_names", "Medical Electronics");
+                                                    intent.putExtra("sub_codes", "3330303");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_msmt = bio_pdf + "sem3/3330304%20Medical%20Sensors%20and%20Measurement%20Techniques.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_msmt);
+                                                    intent.putExtra("sub_names", "Medical Sensors and Measurement Techniques");
+                                                    intent.putExtra("sub_codes", "3330304");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 3:
                                     listView.setAdapter(listViewAdapterBIO4);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_ed = bio_pdf + "sem4/3340001%20ENTREPRENEURSHIP%20DEVELOPMENT.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ed);
+                                                    intent.putExtra("sub_names", "Entrepreneurship Development");
+                                                    intent.putExtra("sub_codes", "3340001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_malp = bio_pdf + "sem4/3340302%20MICROPROCESSOR%20AND%20ASSEMBLY%20LANGUAGE%20PROGRAMMING.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_malp);
+                                                    intent.putExtra("sub_names", "Microprocessor and Assembly Language Programming");
+                                                    intent.putExtra("sub_codes", "3340302");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_hmis = bio_pdf + "sem4/3340303%20%20HOSPITAL%20MANAGEMENT%20AND%20INFORMATION%20SYSTEM.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_hmis);
+                                                    intent.putExtra("sub_names", "Hospital Management and Information System");
+                                                    intent.putExtra("sub_codes", "3340303");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_dmi = bio_pdf + "sem4/3340304%20DIAGNOSTIC%20MEDICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dmi);
+                                                    intent.putExtra("sub_names", "Diagnostic Medical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3340304");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_aoi = bio_pdf + "sem4/3340305%20%20ANALYTICAL%20AND%20OPTICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_aoi);
+                                                    intent.putExtra("sub_names", "Analytical and Optical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3340305");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_s = bio_pdf + "sem4/3340306%20SEMINAR.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_s);
+                                                    intent.putExtra("sub_names", "Seminar");
+                                                    intent.putExtra("sub_codes", "3340306");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 4:
                                     listView.setAdapter(listViewAdapterBIO5);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_mamt = bio_pdf + "sem5/3350301%20MICROPROCESSOR%20APPLICATIONS%20IN%20MEDICAL%20TECHNOLOGY.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mamt);
+                                                    intent.putExtra("sub_names", "Microprocessor Applications in Medical Technology");
+                                                    intent.putExtra("sub_codes", "3350301");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_mmt = bio_pdf + "sem5/3350302%20MEDICAL%20IMAGING%20TECHNIQUES.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mmt);
+                                                    intent.putExtra("sub_names", "Medical Imaging Techniques");
+                                                    intent.putExtra("sub_codes", "3350302");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_cci = bio_pdf + "sem5/3350303%20CRITICAL%20CARE%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_cci);
+                                                    intent.putExtra("sub_names", "Critical Care Instrumentation");
+                                                    intent.putExtra("sub_codes", "3350303");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_tmi = bio_pdf + "sem5/3350304%20THERAPEUTIC%20MEDICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_tmi);
+                                                    intent.putExtra("sub_names", "Therapeutic Medical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3350304");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 5:
                                     listView.setAdapter(listViewAdapterBIO6);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bdsp = bio_pdf + "sem6/3360301%20BIO-MEDICAL%20DIGITAL%20SIGNAL%20PROCESSING.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bdsp);
+                                                    intent.putExtra("sub_names", "BIO-Medical Digital Signal Processing");
+                                                    intent.putExtra("sub_codes", "3360301");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_re = bio_pdf + "sem6/3360302%20REHABILITATION%20ENGINEERING.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_re);
+                                                    intent.putExtra("sub_names", "Rehabilitation Engineering");
+                                                    intent.putExtra("sub_codes", "3360302");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_ti = bio_pdf + "sem6/3360303%20TELEMEDICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ti);
+                                                    intent.putExtra("sub_names", "Telemedical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3360303");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_oi = bio_pdf + "sem6/3360304%20OPHTHALMIC%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_oi);
+                                                    intent.putExtra("sub_names", "Ophthalmic Instrumenation");
+                                                    intent.putExtra("sub_codes", "3360304");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_vmi = bio_pdf + "sem6/3360305%20%20VIRTUAL%20MEDICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_vmi);
+                                                    intent.putExtra("sub_names", "Virtual Medial Instrumentation");
+                                                    intent.putExtra("sub_codes", "3360305");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_bmi = bio_pdf + "sem6/3360306%20BIO%20MATERIALS%20AND%20IMPLANTS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bmi);
+                                                    intent.putExtra("sub_names", "Bio Materials and Implants");
+                                                    intent.putExtra("sub_codes", "3360306");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 6:
+                                                    String pdf_proj = bio_pdf + "sem6/3360307%20PROJECT-II.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_proj);
+                                                    intent.putExtra("sub_names", "Project-II");
+                                                    intent.putExtra("sub_codes", "3360307");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                             }
                         }
@@ -1571,6 +2277,7 @@ public class Syllabus extends AppCompatActivity {
                     });
                 }
                 else if (course.getSelectedItem().toString().equals("Electronic Communication")){
+                    final String ec_pdf = "https://parthravrani.github.io/studymate/syllabus/ec/";
                     spinner.setAdapter(adapterEC);
                     adapterEC.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1579,21 +2286,405 @@ public class Syllabus extends AppCompatActivity {
                             switch (i) {
                                 case 0:
                                     listView.setAdapter(listViewAdapterEC);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bm = ec_pdf + "sem1/3300001%20Basic%20Mathematics.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bm);
+                                                    intent.putExtra("sub_names", "Basic Mathematics");
+                                                    intent.putExtra("sub_codes", "3300001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_eng = ec_pdf + "sem1/3300002%20English.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eng);
+                                                    intent.putExtra("sub_names", "English");
+                                                    intent.putExtra("sub_codes", "3300002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_bp = ec_pdf + "sem1/3300005%20Basic%20Physics.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bp);
+                                                    intent.putExtra("sub_names", "Basic Physics");
+                                                    intent.putExtra("sub_codes", "3300005");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_bcit = ec_pdf + "sem1/3300013%20Basic%20of%20Computer%20&%20information%20Technology%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bcit);
+                                                    intent.putExtra("sub_names", "Basics of Computer & Information Technology");
+                                                    intent.putExtra("sub_codes", "3300013");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_ecp = ec_pdf + "sem1/3311101%20Electronic%20Components%20&%20Practice.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ecp);
+                                                    intent.putExtra("sub_names", "Electronic Components & Practice");
+                                                    intent.putExtra("sub_codes", "3311101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_bee = ec_pdf + "sem1/3320901%20Basic%20of%20Electrical%20Engineering%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bee);
+                                                    intent.putExtra("sub_names", "Basic of Electrical Engineering");
+                                                    intent.putExtra("sub_codes", "3320901");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 1:
                                     listView.setAdapter(listViewAdapterEC2);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_echm = ec_pdf + "sem2/3300003%20Environment%20Conservation%20and%20Hazard%20Management%20.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_echm);
+                                                    intent.putExtra("sub_names", "Environment Conservation and Hazard Management");
+                                                    intent.putExtra("sub_codes", "3300003");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_am = ec_pdf + "sem2/3320002%20Advance%20Mathematics%20Group-1.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_am);
+                                                    intent.putExtra("sub_names", "Advance Mathematics Group-1");
+                                                    intent.putExtra("sub_codes", "3320002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_eca = ec_pdf + "sem2/3321101%20Electronic%20Circuits%20And%20Applications.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eca);
+                                                    intent.putExtra("sub_names", "Electronic Circuits and Applications");
+                                                    intent.putExtra("sub_codes", "3321101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_en = ec_pdf + "sem2/3321102%20Electronic%20Networks.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_en);
+                                                    intent.putExtra("sub_names", "Electronic Networks");
+                                                    intent.putExtra("sub_codes", "3321102");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_ew = ec_pdf + "sem2/3321103%20Electronics%20Workshop.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ew);
+                                                    intent.putExtra("sub_names", "Electronics Workshop");
+                                                    intent.putExtra("sub_codes", "3321103");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 2:
                                     listView.setAdapter(listViewAdapterEC3);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_awp = ec_pdf + "sem3/3331101%20Antenna%20And%20Wave%20Propagation.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_awp);
+                                                    intent.putExtra("sub_names", "Antenna and Wave Propagation");
+                                                    intent.putExtra("sub_codes", "3331101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_ae = ec_pdf + "sem3/3331102%20Analog%20Electronics.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ae);
+                                                    intent.putExtra("sub_names", "Analog Electronics");
+                                                    intent.putExtra("sub_codes", "3331102");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_pec = ec_pdf + "sem3/3331103%20Principles%20of%20Electronic%20Communication.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pec);
+                                                    intent.putExtra("sub_names", "Principles of Electronic Communication");
+                                                    intent.putExtra("sub_codes", "3331103");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_dld = ec_pdf + "sem3/3331104%20Digital%20Logic%20Design.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dld);
+                                                    intent.putExtra("sub_names", "Digital Logic Design");
+                                                    intent.putExtra("sub_codes", "3331104");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_pc = ec_pdf + "sem3/3331105%20Programming%20In%20C.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pc);
+                                                    intent.putExtra("sub_names", "Programming in C");
+                                                    intent.putExtra("sub_codes", "3331105");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 3:
                                     listView.setAdapter(listViewAdapterEC4);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_malp = ec_pdf + "sem4/3341101%20MALP.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_malp);
+                                                    intent.putExtra("sub_names", "MALP");
+                                                    intent.putExtra("sub_codes", "3341101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_dc = ec_pdf + "sem4/3341102%20DIGITAL%20COMMUNICATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dc);
+                                                    intent.putExtra("sub_names", "Digital Communication");
+                                                    intent.putExtra("sub_codes", "3341102");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_oc = ec_pdf + "sem4/3341103%20OPTICAL%20COMMUNICATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_oc);
+                                                    intent.putExtra("sub_names", "Optical Communication");
+                                                    intent.putExtra("sub_codes", "3341103");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_eim = ec_pdf + "sem4/3341104%20%20ELECTRONICS%20INSTRUMENTS%20AND%20MEASUREMENT.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eim);
+                                                    intent.putExtra("sub_names", "Electronics Instruments and Measurement");
+                                                    intent.putExtra("sub_codes", "3341104");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_ie = ec_pdf + "sem4/3341105%20INDUSTRIAL%20ELECTRONICS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ie);
+                                                    intent.putExtra("sub_names", "Industrial Electronics");
+                                                    intent.putExtra("sub_codes", "3341105");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_cdt = ec_pdf + "sem4/3341106%20CIRCUIT%20DESIGN%20TOOLS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_cdt);
+                                                    intent.putExtra("sub_names", "Circuit Design Tools");
+                                                    intent.putExtra("sub_codes", "3341106");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 4:
                                     listView.setAdapter(listViewAdapterEC5);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_m = ec_pdf + "sem5/3351101%20MICROCONTROLLER.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_m);
+                                                    intent.putExtra("sub_names", "MicroController");
+                                                    intent.putExtra("sub_codes", "3351101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_mc = ec_pdf + "sem5/3351102%20%20MOBILE%20COMMUNICATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mc);
+                                                    intent.putExtra("sub_names", "Mobile Communication");
+                                                    intent.putExtra("sub_codes", "3351102");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_mre = ec_pdf + "sem5/3351103%20MICROWAVE%20AND%20RADAR%20ENGINEERING.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mre);
+                                                    intent.putExtra("sub_names", "MicroWave and Radar Engineering");
+                                                    intent.putExtra("sub_codes", "3351103");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_slp = ec_pdf + "sem5/3351104%20SOFTWARE%20LAB%20PRACTICE.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_slp);
+                                                    intent.putExtra("sub_names", "Software Lab Practice");
+                                                    intent.putExtra("sub_codes", "3351104");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_cn = ec_pdf + "sem5/3351105%20COMPUTER%20NETWORKS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_cn);
+                                                    intent.putExtra("sub_names", "Computer Networks");
+                                                    intent.putExtra("sub_codes", "3351105");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_ice = ec_pdf + "sem5/3351106%20INSTRUMENTATION%20AND%20CONTROL%20ENGINEERING.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ice);
+                                                    intent.putExtra("sub_names", "Instrumentation and Control Engineering");
+                                                    intent.putExtra("sub_codes", "3351106");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 6:
+                                                    String pdf_proj = ec_pdf + "sem5/3351107%20PROJECT-I.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_proj);
+                                                    intent.putExtra("sub_names", "Project - I");
+                                                    intent.putExtra("sub_codes", "3351107");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 5:
                                     listView.setAdapter(listViewAdapterEC6);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_eim = ec_pdf + "sem6/3361101%20ENTREPRENEURSHIP%20AND%20INDUSTRIAL%20MANAGEMENT.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eim);
+                                                    intent.putExtra("sub_names", "Enterpreneurship and Industrial Management");
+                                                    intent.putExtra("sub_codes", "3361101");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_ce = ec_pdf + "sem6/3361102%20CONSUMER%20ELECTRONICS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ce);
+                                                    intent.putExtra("sub_names", "Consumer Electronics");
+                                                    intent.putExtra("sub_codes", "3361102");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_mee = ec_pdf + "sem6/3361103%20%20MAINTENANCE%20OF%20ELECTRONICS%20EQUIPMENT.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mee);
+                                                    intent.putExtra("sub_names", "Maintenance of Electronics Equipment");
+                                                    intent.putExtra("sub_codes", "3361103");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_vlsi = ec_pdf + "sem6/3361104%20VLSI.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_vlsi);
+                                                    intent.putExtra("sub_names", "VLSI");
+                                                    intent.putExtra("sub_codes", "3361104");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_es = ec_pdf + "sem6/3361105%20%20EMBEDDED%20SYSTEM.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_es);
+                                                    intent.putExtra("sub_names", "Embedded System");
+                                                    intent.putExtra("sub_codes", "3361105");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_mc = ec_pdf + "sem6/3361106%20MULTIMEDIA%20COMMUNICATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mc);
+                                                    intent.putExtra("sub_names", "Multimedia Communication");
+                                                    intent.putExtra("sub_codes", "3361106");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 6:
+                                                    String pdf_ia = ec_pdf + "sem6/3361107%20INDUSTRIAL%20AUTOMATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ia);
+                                                    intent.putExtra("sub_names", "Industrial Automation");
+                                                    intent.putExtra("sub_codes", "3361107");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 7:
+                                                    String pdf_rs = ec_pdf + "sem6/3361108%20ROBOTICS%20&%20AUTOTRONICS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_rs);
+                                                    intent.putExtra("sub_names", "Robotics & Autotronics");
+                                                    intent.putExtra("sub_codes", "3361108");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 8:
+                                                    String pdf_proj = ec_pdf + "sem6/3361109%20PROJECT-II.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_proj);
+                                                    intent.putExtra("sub_names", "Project - II");
+                                                    intent.putExtra("sub_codes", "3361109");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                             }
                         }
@@ -1605,6 +2696,7 @@ public class Syllabus extends AppCompatActivity {
                     });
                 }
                 else if (course.getSelectedItem().toString().equals("Instrumentation Control")){
+                    final String ic_pdf = "https://parthravrani.github.io/studymate/syllabus/ic/";
                     spinner.setAdapter(adapterIC);
                     adapterIC.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -1613,21 +2705,369 @@ public class Syllabus extends AppCompatActivity {
                             switch (i) {
                                 case 0:
                                     listView.setAdapter(listViewAdapterIC);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bm = ic_pdf + "sem1/3300001%20Basic%20Mathematics.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bm);
+                                                    intent.putExtra("sub_names", "Basic Mathematics");
+                                                    intent.putExtra("sub_codes", "3300001");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_eng = ic_pdf + "sem1/3300002%20English.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_eng);
+                                                    intent.putExtra("sub_names", "English");
+                                                    intent.putExtra("sub_codes", "3300002");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_echm = ic_pdf + "sem1/3300003%20Environment%20Conservation%20and%20Hazard%20Management%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_echm);
+                                                    intent.putExtra("sub_names", "Environment Conservation and Hazard Management");
+                                                    intent.putExtra("sub_codes", "3300003");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_bi = ic_pdf + "sem1/3311701%20Basic%20Instrumentation.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bi);
+                                                    intent.putExtra("sub_names", "Basic Instrumentation");
+                                                    intent.putExtra("sub_codes", "3311701");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_iw = ic_pdf + "sem1/3311702%20Instrumentation%20workshop.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_iw);
+                                                    intent.putExtra("sub_names", "Instrumentation Workshop");
+                                                    intent.putExtra("sub_codes", "3311702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_pce = ic_pdf + "sem1/3311703%20Principles%20of%20Chemical%20Engineering.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pce);
+                                                    intent.putExtra("sub_names", "Principles of Chemical Engineering");
+                                                    intent.putExtra("sub_codes", "3311703");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 1:
                                     listView.setAdapter(listViewAdapterIC2);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_bp = ic_pdf + "sem2/3300005%20Basic%20Physics.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bp);
+                                                    intent.putExtra("sub_names", "Basic Physics");
+                                                    intent.putExtra("sub_codes", "3300005");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_it = ic_pdf + "sem2/3321701%20Industrial%20Transducers.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_it);
+                                                    intent.putExtra("sub_names", "Industrial Transducers");
+                                                    intent.putExtra("sub_codes", "3321701");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_idm = ic_pdf + "sem2/3321702%20Instrumentation%20Device%20Materials.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_idm);
+                                                    intent.putExtra("sub_names", "Instrumentation Device Materials");
+                                                    intent.putExtra("sub_codes", "3321702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_idc = ic_pdf + "sem2/3321703%20Instrumentation%20Devices%20And%20Components.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_idc);
+                                                    intent.putExtra("sub_names", "Instrumentation Devices and Components");
+                                                    intent.putExtra("sub_codes", "3321703");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_icp = ic_pdf + "sem2/3321704%20Instrument%20Configuration%20Practices.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_icp);
+                                                    intent.putExtra("sub_names", "Instrument Configuration Practices");
+                                                    intent.putExtra("sub_codes", "3321704");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 2:
                                     listView.setAdapter(listViewAdapterIC3);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_sissi = ic_pdf + "sem3/3331701%20Safety%20Instrumented%20Systems%20and%20Safety%20Integrated%20Level.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_sissi);
+                                                    intent.putExtra("sub_names", "Safety Instrumented Systems and Safety Integrated Level");
+                                                    intent.putExtra("sub_codes", "3331701");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_ts = ic_pdf + "sem3/3331702%20Telemetry%20System.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ts);
+                                                    intent.putExtra("sub_names", "Telemetry System");
+                                                    intent.putExtra("sub_codes", "3331702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_dt = ic_pdf + "sem3/3331703%20Digital%20Techniques.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dt);
+                                                    intent.putExtra("sub_names", "Digital Techniques");
+                                                    intent.putExtra("sub_codes", "3331703");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_cc = ic_pdf + "sem3/3331704%20Control%20Components.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_cc);
+                                                    intent.putExtra("sub_names", "Control Components");
+                                                    intent.putExtra("sub_codes", "3331704");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_pai = ic_pdf + "sem3/3331705%20Process%20Application%20and%20Instrumentation%20Maintenance%20Management.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pai);
+                                                    intent.putExtra("sub_names", "Process Application and Instrumentation Maintenance Management");
+                                                    intent.putExtra("sub_codes", "3331705");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_id = ic_pdf + "sem3/3331706%20Instrumentation%20Drawing.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_id);
+                                                    intent.putExtra("sub_names", "Instrumentaion Drawing");
+                                                    intent.putExtra("sub_codes", "3331706");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 3:
                                     listView.setAdapter(listViewAdapterIC4);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_cis = ic_pdf + "sem4/3341701%20CONTROL%20INSTRUMENTATION%20SYSTEM.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_cis);
+                                                    intent.putExtra("sub_names", "Control Instrumentation System");
+                                                    intent.putExtra("sub_codes", "3341701");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_plc = ic_pdf + "sem4/3341702%20PROGRAMMABLE%20LOGIC%20CONTROLLER%20AND%20DISTRIBUTED%20CONTROL%20SYSTEM.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_plc);
+                                                    intent.putExtra("sub_names", "Programmable Logic Controller and Distributed Control System");
+                                                    intent.putExtra("sub_codes", "3341702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_pi = ic_pdf + "sem4/3341703%20PROCESS%20INSTRUMENTATION-I.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pi);
+                                                    intent.putExtra("sub_names", "Process Instrumentation-I");
+                                                    intent.putExtra("sub_codes", "3341703");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_bi = ic_pdf + "sem4/3341704%20BIOMEDICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_bi);
+                                                    intent.putExtra("sub_names", "Bio-Medical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3341704");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_isp = ic_pdf + "sem4/3341705%20%20INSTRUMENTATION%20SIMULATION%20PRACTICES.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_isp);
+                                                    intent.putExtra("sub_names", "Instrumentation Simulation Practices");
+                                                    intent.putExtra("sub_codes", "3341705");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 4:
                                     listView.setAdapter(listViewAdapterIC5);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_ep = ic_pdf + "sem5/3351701%20ELECTRONIC%20AND%20PNEUMATIC%20INSTRUMENTATION.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ep);
+                                                    intent.putExtra("sub_names", "Electronic and Pneumatic Instrumentation");
+                                                    intent.putExtra("sub_codes", "3351701");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_pi = ic_pdf + "sem5/3351702%20PROCESS%20INSTRUMENTATION-II.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_pi);
+                                                    intent.putExtra("sub_names", "Process Instrumentation-II");
+                                                    intent.putExtra("sub_codes", "3351702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_ai = ic_pdf + "sem5/3351703%20ANALYTICAL%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ai);
+                                                    intent.putExtra("sub_names", "Analytical Instrumentation");
+                                                    intent.putExtra("sub_codes", "3351703");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_plc = ic_pdf + "sem5/3351704%20PLC%20PROGRAMMING.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_plc);
+                                                    intent.putExtra("sub_names", "PLC Programming");
+                                                    intent.putExtra("sub_codes", "3351704");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_mmi = ic_pdf + "sem5/3351705%20MICROPROCESSOR%20AND%20MICROCONTROLLER%20IN%20INSTRUMENTATION.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mmi);
+                                                    intent.putExtra("sub_names", "Microprocessor and Microcontrollr in Instrumentation");
+                                                    intent.putExtra("sub_codes", "3351705");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                                 case 5:
                                     listView.setAdapter(listViewAdapterIC6);
+                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                            switch (i) {
+                                                case 0:
+                                                    String pdf_ai = ic_pdf + "sem6/3361701%20APPLIED%20INSTRUMENTATION.pdf";
+                                                    Intent intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ai);
+                                                    intent.putExtra("sub_names", "Applied Instrumentation");
+                                                    intent.putExtra("sub_codes", "3361701");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 1:
+                                                    String pdf_ipc = ic_pdf + "sem6/3361702%20INDUSTRIAL%20POWER%20CONTROL.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ipc);
+                                                    intent.putExtra("sub_names", "Industrial Power Control");
+                                                    intent.putExtra("sub_codes", "3361702");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 2:
+                                                    String pdf_dcs = ic_pdf + "sem6/3361703%20DCS%20AND%20SCADA.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_dcs);
+                                                    intent.putExtra("sub_names", "DCS and SCADA");
+                                                    intent.putExtra("sub_codes", "3361703");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 3:
+                                                    String pdf_ic = ic_pdf + "sem6/3361704%20%20INDUSTRIAL%20DATA%20COMMUNICATION%20.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_ic);
+                                                    intent.putExtra("sub_names", "Industrial Data Communication");
+                                                    intent.putExtra("sub_codes", "3361704");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 4:
+                                                    String pdf_mce = ic_pdf + "sem6/3361705%20%20PIC%20MICROCONTROLLER%20AND%20EMBEDED%20SYSTEMS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_mce);
+                                                    intent.putExtra("sub_names", "PIC Microcontroller and Embedded Systems");
+                                                    intent.putExtra("sub_codes", "3361705");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 5:
+                                                    String pdf_en = ic_pdf + "sem6/3361706%20%20EMBEDED%20NETWORKS.pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_en);
+                                                    intent.putExtra("sub_names", "Embedded Networks");
+                                                    intent.putExtra("sub_codes", "3361706");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                                case 6:
+                                                    String pdf_proj = ic_pdf + "sem6/3361707%20PROJECT-%20II%20(%20WITH%20SEMINAR).pdf";
+                                                    intent = new Intent(getApplicationContext(), SemsterPDF.class);
+                                                    intent.putExtra("url_pdf", pdf_proj);
+                                                    intent.putExtra("sub_names", "Project-II (With Seminar)");
+                                                    intent.putExtra("sub_codes", "3361707");
+                                                    startActivity(intent);
+                                                    overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+                                                    break;
+                                            }
+                                        }
+                                    });
                                 break;
                             }
                         }
