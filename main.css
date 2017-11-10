@@ -1,5 +1,5 @@
-.material-icons{
-    margin-right: 20    px;
+.navmargin{
+    margin-right: 20px;
 }
 .demo-layout-transparent {
   background: url('img/bg.jpeg') center / cover;
@@ -17,7 +17,7 @@
 }
 .demo-card-image.mdl-card {
   height: 256px;
-  background: url('img/result_time_big.jpeg') center / cover;
+  background: url('img/result_medium.jpeg') center / cover;
 }
 .demo-card-image > .mdl-card__actions {
   height: 52px;
@@ -32,7 +32,7 @@
 
 .demo-card-image2.mdl-card {
   height: 256px;
-  background: url('img/syllab_big.jpeg') center / cover;
+  background: url('img/syllab_medium.jpeg') center / cover;
 }
 .demo-card-image2 > .mdl-card__actions {
   height: 52px;
@@ -47,7 +47,7 @@
 
 .demo-card-image3.mdl-card {
   height: 256px;
-  background: url('img/ref_books_big.jpeg') center / cover;
+  background: url('img/ref_books_med.jpeg') center / cover;
 }
 .demo-card-image3 > .mdl-card__actions {
   height: 52px;
@@ -62,7 +62,7 @@
 
 .demo-card-image4.mdl-card {
   height: 256px;
-  background: url('img/sites_big.jpeg') center / cover;
+  background: url('img/site_medium.jpeg') center / cover;
 }
 .demo-card-image4 > .mdl-card__actions {
   height: 52px;
@@ -77,7 +77,7 @@
 
 .demo-card-image5.mdl-card {
   height: 256px;
-  background: url('img/lyp_big.jpeg') center / cover;
+  background: url('img/lyp_medium.jpeg') center / cover;
 }
 .demo-card-image5 > .mdl-card__actions {
   height: 52px;
@@ -92,7 +92,7 @@
 
 .demo-card-image6.mdl-card {
   height: 256px;
-  background: url('img/help_big.jpeg') center / cover;
+  background: url('img/help_medium.jpeg') center / cover;
 }
 .demo-card-image6 > .mdl-card__actions {
   height: 52px;
