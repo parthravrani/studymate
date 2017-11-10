@@ -1,0 +1,106 @@
+.material-icons{
+    margin-right: 20    px;
+}
+.demo-layout-transparent {
+  background: url('img/bg.jpeg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+.content {
+    padding-top: 100px;
+    max-width: 700px;
+    margin: auto;
+}
+.demo-card-image.mdl-card {
+  height: 256px;
+  background: url('img/result_time_big.jpeg') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image2.mdl-card {
+  height: 256px;
+  background: url('img/syllab_big.jpeg') center / cover;
+}
+.demo-card-image2 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image2__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image3.mdl-card {
+  height: 256px;
+  background: url('img/ref_books_big.jpeg') center / cover;
+}
+.demo-card-image3 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image3__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image4.mdl-card {
+  height: 256px;
+  background: url('img/sites_big.jpeg') center / cover;
+}
+.demo-card-image4 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image4__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image5.mdl-card {
+  height: 256px;
+  background: url('img/lyp_big.jpeg') center / cover;
+}
+.demo-card-image5 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image5__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image6.mdl-card {
+  height: 256px;
+  background: url('img/help_big.jpeg') center / cover;
+}
+.demo-card-image6 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image6__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
