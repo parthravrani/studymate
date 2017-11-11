@@ -3,6 +3,7 @@
 }
 .demo-layout-transparent {
   background: url('img/bg2.jpeg') center / cover;
+  border-radius: 15px;
 }
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
