@@ -2,7 +2,7 @@
     margin-right: 20px;
 }
 .demo-layout-transparent {
-  background: url('img/bg.jpeg') center / cover;
+  background: url('img/bg2.jpeg') center / cover;
 }
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
@@ -32,7 +32,7 @@
 
 .demo-card-image2.mdl-card {
   height: 256px;
-  background: url('img/syllab_medium.jpeg') center / cover;
+  background: url('img/syllabus_medium.jpeg') center / cover;
 }
 .demo-card-image2 > .mdl-card__actions {
   height: 52px;
