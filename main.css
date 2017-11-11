@@ -108,6 +108,32 @@
   font-family: 'Roboto', sans-serif;
 }
 .app{
-  min-height: 120px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-left: 10px;
+  padding-Bottom: 10px;
   background-color: #00bcd4;
+}
+.appname{
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.appname2{
+  padding: 10px;
+  font-family: 'Arial'
+}
+.card {
+  margin: 8px;
+  box-shadow: 1px 2px 2px 2px rgba(0,0,0,0.2);
+  background-color: #ffffff;
+  transition: 0.3s;
+  border: none;
+  color: black;
+  border-radius: 2px;
+  min-width: 250px;
+  max-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,.5);
 }

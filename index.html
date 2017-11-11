@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="material.css">
   <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
@@ -26,7 +27,12 @@
     </header>
     <div class="mdl-layout__drawer">
       <nav class="mdl-navigation">
-          <div class="app"></div>
+          <div class="app">
+              <font color="white" size="5px" class="me appname">
+                  StudyMate</font><br>
+                  <font color="white" class="me appname2">
+                      Developed with ♥ in Bharat</font>
+          </div>
         <ul>
           <li>
             <a class="mdl-navigation__link" href="">
@@ -89,12 +95,21 @@
     </div>
     <main class="mdl-layout__content">
       <div class="content mdl-grid">
-        <div class="demo-card-image mdl-card mdl-shadow--6dp mdl-cell mdl-cell--12-col">
+        <div id="btn" class="demo-card-image mdl-card mdl-shadow--6dp mdl-cell mdl-cell--12-col mdl-js-ripple-effect">
           <div class="mdl-card__title mdl-card--expand"></div>
           <div class="mdl-card__actions">
             <span class="demo-card-image__filename">Result and Time-Table</span>
           </div>
         </div>
+        <div id="pera" class="hiden" style="display: none;"> 
+            <a href="http://result1.gtu.ac.in/" target="_blank">
+          <div class="card mdl-shadow--6dp mdl-cell mdl-cell--4-col">
+              <div class="mdl-card__title mdl-card--expand me">Result</div>
+            </div></a>
+            
+            <a href="http://timetable.gtu.ac.in" target="_blank"><div class="card mdl-shadow--6dp mdl-cell mdl-cell--4-col">
+                <div class="mdl-card__title mdl-card--expand me">Time-Table</div>
+              </div></a></div>
 
         <div class="demo-card-image2 mdl-card mdl-shadow--6dp mdl-cell mdl-cell--12-col">
           <div class="mdl-card__title mdl-card--expand"></div>
@@ -133,6 +148,13 @@
       </div>
     </main>
   </div>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#btn").click(function(){
+        $("#pera").toggle(300);
+    });
+});
+  </script>
 </body>
 
 </html>
