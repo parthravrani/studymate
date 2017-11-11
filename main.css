@@ -107,3 +107,7 @@
 .me{
   font-family: 'Roboto', sans-serif;
 }
+.app{
+  min-height: 120px;
+  background-color: #00bcd4;
+}
