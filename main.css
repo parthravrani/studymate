@@ -15,6 +15,11 @@
     max-width: 700px;
     margin: auto;
 }
+.content2 {
+  padding-top: 10px;
+  max-width: 700px;
+  margin: auto;
+}
 .demo-card-image.mdl-card {
   height: 256px;
   background: url('img/result_medium.jpeg') center / cover;
